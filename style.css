@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+}
+nav{
+  background: #151515;
+  padding: 5px 40px;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  opacity: 0;
+  transition: all 0.2s linear;
+  
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+}
+nav ul li a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: cyan;
+}
+nav ul li i{
+  font-size: 23px;
+}
+nav ul li.btn{
+  display: none;
+}
+nav ul li.btn.hide i:before{
+  content: '\f00d';
+}
+@media all and (max-width: 900px){
+  nav{
+    padding: 5px 30px;
+  }
+  nav ul li.items{
+    width: 100%;
+    display: none;
+  }
+  nav ul li.items.show{
+    display: block;
+  }
+  nav ul li.btn{
+    display: block;
+  }
+  nav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff,
+                inset 0 0 10px #66ffff;
+  }
+  nav ul li.items:hover:after{
+    opacity: 0;
+  }
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    background-image : linear-gradient(120deg,rgba(59, 0, 197, 0.533),#df5616);
+}
+
+/*méthode inlineblock + espacement en les liens*/
+header nav li {
+    display: inline-block;
+    margin: 0px 5px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    margin: 5px 500px 5px 450px;
+}
+
+/*remise en forme les liens (couleur,surlignement...)*/
+header nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    list-style: none;
+    margin: 5px 5px ;
+    text-align: center;
+    padding: 10px;
+}
+
+header {
+    background: white;
+    width: 100%;
+    height: 65px; 
+    top: 0%;
+    z-index: 999; 
+}
+
+
+a:hover {
+    color: #F00;
+    transition: 0.3s;
+}
+
+.shoes-list {
+    text-align: center;
+}
+
+.product{
+    width: 260px;
+    padding: : 40px;
+    position: relative;
+    justify-content: flex-start;
+    display: flex;
+    display: inline-block;
+    float: left;
+    margin:50px 25px 30px 100px;
+    text-align: center;
+    align: 100%;
+    background-repeat: no-repeat;
+}
+
+.product-thumbnail{
+    position: relative;
+}
+.product-thumbnail i {
+    position: absolute;
+    right: 10px;
+    top : 5px;
+    font-size: 25px;
+}
+
+.product-content {
+    text-align: center;
+}
+
+footer {
+    color: white;
+    background: rgb(87, 29, 99);
+    width: 100%;
+    height: 60px;
+    margin-top: 2000px;
+    text-align: center;
+}
+
+button {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid black;
+    padding: 10px;
+    transition: 0.3s;
+    margin-left: 510px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    background: white;
+    }
+
+button:hover {
+    background: black;
+    color: white;
+    transition: 1s;
+    border-radius: 17px;
+}
+
+nav ul .search-icon{
+  height: 40px;
+  width: 240px;
+  display: flex;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+nav ul .search-icon input{
+  height: 100%;
+  width: 200px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  color: #000;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+}
+nav ul .search-icon .icon{
+  height: 100%;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+nav ul .search-icon .icon:hover{
+  background: #e6e6e6;
+}
+nav ul .search-icon .icon span{
+  color: #222222;
+  font-size: 18px;
+}
+nav ul li.btn{
+  font-size: 29px;
+  flex: 1;
+  padding: 0 40px;
+  display: none;
+}
+nav ul li.btn span{
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  line-height: 42px;
+  border: 1px solid #151515;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav ul li.btn span.show:before{
+  content: '\f00d';
+}
+@media screen and (max-width: 1052px) {
+  nav{
+    padding: 10px 40px 10px 0px;
+  }
+  nav ul li.logo{
+    display: none;
+  }
+  nav ul div.items{
+    flex: 4;
+  }
+}
+@media screen and (max-width: 800px){
+  nav ul li.btn{
+    display: block;
+  }
+  nav{
+    z-index: 1;
+    padding: 9px 40px 9px 0;
+  }
+  nav ul div.items{
+    z-index: -1;
+    position: fixed;
+    top: -220px;
+    right: 0;
+    width: 100%;
+    background: #222222;
+    display: inline-block;
+    transition: top .4s;
+  }
+  nav ul div.items.show{
+    top: 60px;
+  }
+  nav ul div.items li{
+    text-align: center;
+    line-height: 30px;
+    margin: 30px 0;
+  }
+  nav ul div.items li a{
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 405px) {
+  nav ul{
+    flex-wrap: nowrap;
+  }
+  nav ul li.search{
+    width: 50vmin;
+  }
+  nav ul li input{
+    width: 40vmin;
+  }
+  nav ul li .search-icon{
+    width: 10vmin;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  padding: 0 40px;
+  z-index: -2;
+}
+.content .text{
+  font-size: 40px;
+  font-weight: 800;
+  padding: 5px 0;
+  color: #202020;
+}
+.content .p{
+  font-size: 28px;
+  font-weight: 600;
+  color: #202020;
+}
+
+.fa-heart:hover{
+  color: black;
+  }
+  .fa-heart:hover{
+  color: red;
+  }
+  .fa-heart before:hover{
+  color: black;
+  }
